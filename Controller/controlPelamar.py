@@ -64,3 +64,24 @@ class LinkedList:
         for x in result:
             table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
         print(table)
+
+    def jumpsearch(self, temp, key):
+        temp = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+
+        if not temp:
+            print("List masih kosong")
+            return
+
+        n = len(temp)
+        step = int(n ** 0.5)
+        prev = 0
+        while prev < n and temp[prev]['job'] < key:
+            prev += step
+        prev -= step
+        while prev < n:
+            if temp[prev]['job'] == key:
+                return (temp[prev])
+            prev += 1
+        return None
