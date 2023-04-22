@@ -1,5 +1,6 @@
 from Model import database
 from prettytable import PrettyTable
+import time
 
 class Node:
     def __init__(self, data=None):
@@ -16,7 +17,7 @@ class LinkedList:
                 temp.append(i)
 
             if not temp:
-                print("List masih kosong")
+                print("MAAF LOKER KOSONG")
                 return
             
             if len(data) > 1:
@@ -54,7 +55,7 @@ class LinkedList:
             temp.append(i)
 
         if not temp:
-            print("List masih kosong")
+            print("MAAF LOKER KOSONG")
             return
 
         result = self.mergeSort(temp) 
@@ -71,7 +72,7 @@ class LinkedList:
             temp.append(i)
 
         if not temp:
-            print("List masih kosong")
+            print("MAAF LOKER KOSONG")
             return
 
         n = len(temp)
@@ -120,3 +121,13 @@ class LinkedList:
                     print("\nMOHON ISI SESUAI KETENTUAN!")
             except KeyboardInterrupt:
                     print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
+
+    def loading(self):
+        count = 0
+
+        for t in range(101):
+            time.sleep(0.05)
+            print(f'\rLoading.. |{t}%|', end='', flush=True)
+            count += 1
+            if count == 3:
+                count = 0

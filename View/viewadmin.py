@@ -2,7 +2,7 @@ from Controller import controlAccount
 from Controller import controlLoker
 import os, time
 
-linked_list = controlLoker.LinkedList()
+lili = controlLoker.LinkedList()
 
 def menuAdmin():
     while True:
@@ -24,31 +24,26 @@ def menuAdmin():
     Masukkan Pilihan (1/2/3/4/5): '''))
 
         if pilihadmin == '1':
-            linked_list.display()
-            print("Loading...")
-            time.sleep(5)
+            lili.display()
+            lili.load()
             os.system("cls")
         elif pilihadmin == '2':
-            linked_list.add_database()
-            linked_list.display()
-            print("Loading...")
-            time.sleep(5)
+            lili.add_database()
+            lili.display()
+            lili.load()
             os.system("cls")
         elif pilihadmin == '3':
-            linked_list.delete()
-            linked_list.display()
-            print("Loading...")
-            time.sleep(5)
+            lili.delete()
+            lili.display()
+            lili.load()
             os.system("cls")
         elif pilihadmin == '4':
-            linked_list.lihatuser()
-            print("Loading...")
-            time.sleep(5)
+            lili.lihatuser()
+            lili.load()
             os.system("cls")
         elif pilihadmin == '5':
             print("Anda akan diarahkan ke menu login")
-            print("Loading...")
-            time.sleep(3)
+            lili.load()
             os.system('cls')
             controlAccount.login()
         else:

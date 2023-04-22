@@ -1,6 +1,6 @@
 from Model import database
 from prettytable import PrettyTable
-import os, time
+import time
 
 class Node:
     def __init__(self, data=None):
@@ -45,7 +45,9 @@ class LinkedList:
                 domisili = str.lower(input("Domisili              : "))
                 umur = int(input("Maksimal Umur Pekerja : "))
 
-                if not (job == "" or perusahaan == "" or email == "" or domisili == ""):
+                if job.isspace() or perusahaan.isspace() or email.isspace() or domisili.isspace() or not job or not perusahaan or not email or not domisili:
+                    print("\nMOHON JANGAN KOSONGKAN DATA!")
+                else:
                     data = {"job" : job,
                             "perusahaan" : perusahaan,
                             "gaji" : gaji,
@@ -55,15 +57,13 @@ class LinkedList:
                     database.mycol.insert_one(data).inserted_id
                     print("\nData berhasil ditambahkan")
                     break
-                else:
-                    print("\nMOHON JANGAN KOSONGKAN DATA!")
 
             except ValueError:
                 print("\nMOHON ISI SESUAI KETENTUAN!\n")
             except KeyboardInterrupt:
                 print("\n\nMAAF PROGRAM TIDAK MENGERTI!\n")
 
-    def display(self):#rawan
+    def display(self):
         data = []
         for i in database.mycol.find({}):
             data.append(i)
@@ -74,7 +74,7 @@ class LinkedList:
             table = PrettyTable(['Bagian Posisi', 'Nama Perusahaan', 'Nominal Gaji', "Email Perusahaan", "Domisili Perusahaan", "Maksimal Umur"])
             for x in data:
                 table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
-        print(table)
+            print(table)
 
     def search(self, temp, key):
         temp = []
@@ -82,7 +82,7 @@ class LinkedList:
             temp.append(i)
 
         if not temp:
-            print("List masih kosong")
+            print("MAAF LOKER KOSONG")
             return
 
         n = len(temp)
@@ -105,7 +105,7 @@ class LinkedList:
                 for i in database.mycol.find({}):
                     temp.append(i)
 
-                key = str(input("pilih Loker: "))
+                key = str.lower(input("pilih Loker: "))
                 result = self.search(temp , key) 
 
                 if result:
@@ -122,8 +122,7 @@ class LinkedList:
             except KeyboardInterrupt:
                     print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
 
-
-    def lihatuser(self):#rawan
+    def lihatuser(self):
         datauser = []            
         for i in database.role.find({}):
             datauser.append(i)
@@ -135,3 +134,13 @@ class LinkedList:
             for x in datauser:
                 table.add_row([x['nama'], x['privilege']])
             print(table)
+    
+    def load(self):
+        count = 0
+
+        for t in range(101):
+            time.sleep(0.05)
+            print(f'\rLoading.. |{t}%|', end='', flush=True)
+            count += 1
+            if count == 3:
+                count = 0
