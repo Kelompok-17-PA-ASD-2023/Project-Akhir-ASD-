@@ -85,3 +85,38 @@ class LinkedList:
                 return (temp[prev])
             prev += 1
         return None
+    
+    def applypelamar(self):
+        temp = []
+        col = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+        while True:
+            try:
+                key = str.lower(input("Ingin mendaftar posisi apa: "))
+                result = self.jumpsearch(temp , key) 
+                col.append(result) 
+
+                if result is None:
+                    print("maaf tidak ditemukan")
+                else:
+                    table = PrettyTable(['Bagian Posisi', 'Nama Perusahaan', 'Nominal Gaji', "Email Perusahaan", "Domisili Perusahaan", "Maksimal Umur"])
+                    for x in col:
+                        table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
+                    print(table)
+                    print('Adapun persyaratan', key, '''yang diperlukan yaitu:
+                    1. Cover Letter
+                    2. CV
+                    3. Portofolio
+                    4. Ijazah dan transkrip nilai
+                    5. Sertifikat dan piagam penghargaan
+                    6. Pas foto terbaru
+                    7. Fotokopi Identitas terbaru
+                    8. SKCK 
+                    ''')
+                break
+                   
+            except ValueError:
+                    print("\nMOHON ISI SESUAI KETENTUAN!")
+            except KeyboardInterrupt:
+                    print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
