@@ -26,25 +26,20 @@ def menuAdmin():
         if pilihadmin == '1':
             lili.display()
             lili.load()
-            os.system("cls")
         elif pilihadmin == '2':
             lili.add_database()
             lili.display()
             lili.load()
-            os.system("cls")
         elif pilihadmin == '3':
             lili.delete()
             lili.display()
             lili.load()
-            os.system("cls")
         elif pilihadmin == '4':
             lili.lihatuser()
             lili.load()
-            os.system("cls")
         elif pilihadmin == '5':
             print("Anda akan diarahkan ke menu login")
             lili.load()
-            os.system('cls')
             controlAccount.login()
         else:
             print('Pilihan anda tidak tersedia')

@@ -1,6 +1,6 @@
 from Model import database
 from prettytable import PrettyTable
-import time
+import os
 
 class Node:
     def __init__(self, data=None):
@@ -123,11 +123,8 @@ class LinkedList:
                     print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
 
     def loading(self):
-        count = 0
-
-        for t in range(101):
-            time.sleep(0.05)
-            print(f'\rLoading.. |{t}%|', end='', flush=True)
-            count += 1
-            if count == 3:
-                count = 0
+        ask = input("\nTekan Enter Untuk Lanjut ...")
+        if ask == "":
+            os.system("cls")
+        else:
+            os.system("cls")

@@ -28,23 +28,18 @@ def menuPelamar():
         if pilihadmin == '1':
             lili.display()
             ll.loading()
-            os.system("cls")
         elif pilihadmin == '2':
             ll.applypelamar()
             ll.loading()
-            os.system("cls")
         elif pilihadmin == '3':
             ll.sortList()
             ll.loading()
-            os.system("cls")
         elif pilihadmin == '4':
             controlAccount.profilpelamar()
             ll.loading()
-            os.system("cls")
         elif pilihadmin == '5':
             print("Anda akan diarahkan ke menu login")
             ll.loading()
-            os.system('cls')
             controlAccount.login()
         else:
             print('Pilihan anda tidak tersedia')
