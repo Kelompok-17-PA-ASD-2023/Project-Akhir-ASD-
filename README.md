@@ -14,7 +14,8 @@ Anggota kelompok:
 ![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234656205-60120f74-8c3d-41e9-bfd6-e5917bebce2a.png)
 
 mvc
-
+ * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
+ * 
 ## 📌Fitur dan Fungsionalitas
 
 ### Dalam Folder Controller
@@ -26,7 +27,13 @@ Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file l
 
 Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library pwinput yang bertugas mengenkripsikan password yang diinput pengguna, kemudian library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi, dan yang terakhir adalah library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
 
-![Cuplikan layar 2023-04-27 013514](https://user-images.githubusercontent.com/122012870/234657400-009c2264-0de2-412f-8adf-914dba999984.png)
+```
+from Model import database
+from View import viewadmin
+from View import viewpelamar
+import pwinput
+import os, time
+```
 
 - Function Login
 
@@ -38,13 +45,65 @@ Untuk mencari nama yang sesuai dalam database maka diperlukan find_one, find_one
 
 Penggunaan statement try except dimaksudkan untuk menangani kesalahan penginputan data dari user yang tidak disengaja agar tidak terjadi error di dalam output program nantinya
 
-![Cuplikan layar 2023-04-27 020119](https://user-images.githubusercontent.com/122012870/234663647-b2094070-0f16-4fa2-83fa-56c5d81049ba.png)
+```
+def login():
+    print('''\nSELAMAT DATANG! 
+    > > > >....APLIKASI PENYEDIA LOWONGAN KERJA ONLINE....< < < <''')
+    global penggunaLogin
+    try:
+        nama = str.lower(input("\nMasukkan username anda : "))
+        user = nama.capitalize()
+        pw = str(pwinput.pwinput("Masukkan password anda : "))
+        result = database.role.find_one({"nama": user, })
+        penggunaLogin = user
+
+        if result is None:
+            print("MOHON PERIKSA USERNAME DAN PASSWORD ANDA KEMBALI!")
+            time.sleep(2)
+            os.system('cls')
+            login()
+
+        elif result['nama'] == user and pw== result['pass']:
+            print("Berhasil Login")
+            if result["privilege"] == "admin":
+                os.system('cls')
+                print("SELAMAT DATANG", user)
+                os.system('cls')
+                viewadmin.menuAdmin()
+
+            elif result["privilege"] == "pelamar":
+                os.system('cls')
+                print("SELAMAT DATANG", user)
+                viewpelamar.menuPelamar()
+        else:
+            print("MOHON PERIKSA USERNAME DAN PASSWORD ANDA KEMBALI!")
+            time.sleep(2)
+            os.system('cls')
+            login()
+    except KeyboardInterrupt:
+            print("\nMAAF PROGRAM TIDAK MENGERTI!")
+            time.sleep(2)
+            os.system('cls')
+            login()
+```
 
 - Function profilpelamar
 
 Function profilpelamar adalah program yang menampilkan perintah terkait dengan data-data si pelamar yang telah tersimpan dalam database, menggunakan metode find_one untuk mencari data sesuai nama pelamar yang sedang login
 
-![Cuplikan layar 2023-04-27 021628](https://user-images.githubusercontent.com/122012870/234666697-941e61ff-e499-4853-b0c1-95b6742b12cf.png)
+```
+def profilpelamar():
+    pelamar = database.role.find_one({"nama": penggunaLogin})
+    print("\n-------------- PROFIL PELAMAR --------------")
+    print("> Nama Pelamar     :", pelamar["nama"])
+    print("> Tanggal Lahir    :", pelamar["lahir"]) 
+    print("> Email Pelamar    :", pelamar["email"])
+    print("> Pendidikan       :", pelamar["pendidikan"])
+    print("> Jurusan          :", pelamar["jurusan"]) 
+    print("> Tahun Bergabung  :", pelamar["tahun"]) 
+    print("> Sebagai          :", pelamar["privilege"])
+    print("--------------------------------------------")
+```
 
 ### ⚙️ File ControlLoker
 - Mengimport Module dan Library
@@ -53,13 +112,22 @@ Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file l
 
 Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library prettytable yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
 
-![Cuplikan layar 2023-04-27 023551](https://user-images.githubusercontent.com/122012870/234670919-24167021-8171-4b6b-b54a-ef49648ce850.png)
+```
+from Model import database
+from prettytable import PrettyTable
+import os
+```
 
 - Class Node
 
 Class Node adalah untuk mempresentasikan sebuah simpul dalam Linked list
 
-![Cuplikan layar 2023-04-27 023707](https://user-images.githubusercontent.com/122012870/234671236-a7c58ade-dc56-4388-bfba-613382e52277.png)
+```
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+```
 
 - Class LinkedList
 
@@ -67,19 +135,47 @@ Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-nod
 
 Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
 
-![Cuplikan layar 2023-04-27 024025](https://user-images.githubusercontent.com/122012870/234671866-77591dd2-fde7-4c09-8430-bb6f45e264c3.png)
+```
+class LinkedList:
+    def __init__(self):
+        self.head = None
+```
 
 - Method append
 
 Method ini berfungsi untuk menambahkan node baru di bagian akhir linked list. Method kemudian akan membuat istance baru dari class Node dan menyimpan data pada node tersebut.
 
-![Cuplikan layar 2023-04-27 024623](https://user-images.githubusercontent.com/122012870/234673292-dacdf10c-4dea-497d-b0fe-0e7b40709897.png)
+```
+    def append(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+```
 
 - Method add_data
 
 Method ini berfungsi untuk menambahkan data yang sesuai dengan penempatannya dengan database ke dalam method append. 
 
-![Cuplikan layar 2023-04-27 025431](https://user-images.githubusercontent.com/122012870/234675096-bb1e1734-bea4-468f-812c-44bb54b30292.png)
+```
+    def add_data (self):
+        tambah = database.mycol.find()
+        for i in tambah:
+            job = i["job"]
+            perusahaan = i["perusahaan"]
+            gaji = i["gaji"]
+            email = i["email"]
+            domisili = i["domisili"]
+            umur = i["umur"]
+
+            data = [job, perusahaan, gaji, email, domisili, umur] 
+
+            self.append(data)
+```
 
 - Method add_database
 
@@ -87,33 +183,140 @@ Method ini berfungsi untuk memasukkan inputan dari user ke dalam database menggu
 
 Terdapat pengkondisian yang melibatkan metode isspace python yang berfungsi untuk mencegah inputan kosong masuk ke dalam database
 
-![image](https://user-images.githubusercontent.com/122012870/234677856-973a77da-5e8a-48b1-808e-94c5693a217a.png)
+```
+    def add_database(self):
+        while True:
+            try:     
+                job = str.lower(input("Posisi Job            : "))
+                perusahaan = str.lower(input("Nama Perusahaan       : "))
+                gaji = int(input("Nominal Gaji          : "))
+                email = str.lower(input("Email Perusahaan      : "))
+                domisili = str.lower(input("Domisili              : "))
+                umur = int(input("Maksimal Umur Pekerja : "))
+
+                if job.isspace() or perusahaan.isspace() or email.isspace() or domisili.isspace() or not job or not perusahaan or not email or not domisili:
+                    print("\nMOHON JANGAN KOSONGKAN DATA!")
+                else:
+                    data = {"job" : job,
+                            "perusahaan" : perusahaan,
+                            "gaji" : gaji,
+                            "email": email,
+                            "domisili": domisili,
+                            "umur" : umur}
+                    database.mycol.insert_one(data).inserted_id
+                    print("\nData berhasil ditambahkan")
+                    break
+
+            except ValueError:
+                print("\nMOHON ISI SESUAI KETENTUAN!\n")
+            except KeyboardInterrupt:
+                print("\n\nMAAF PROGRAM TIDAK MENGERTI!\n")
+```
 
 - Method display
 Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam database yang kemudian tersusun di dalam table berkat bantuan dari library prettytable. 
 
-![image](https://user-images.githubusercontent.com/122012870/234678196-ff8186f9-9610-41bb-a8a8-a0f6345f1ec1.png)
+```
+    def display(self):
+        data = []
+        for i in database.mycol.find({}):
+            data.append(i)
+
+        if not data:
+            print("MAAF LOKER KOSONG")
+        else:
+            table = PrettyTable(['Bagian Posisi', 'Nama Perusahaan', 'Nominal Gaji', "Email Perusahaan", "Domisili Perusahaan", "Maksimal Umur"])
+            for x in data:
+                table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
+            print(table)
+```
 
 - Method search
 Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis pencarian jump search. Algoritma jump menggunakan teknik loncatan untuk melakukan pencarian secara efisien.
 
-![image](https://user-images.githubusercontent.com/122012870/234678903-d6628167-decf-48e5-a4bd-04d1cd92eb4c.png)
+```
+    def search(self, temp, key):
+        temp = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+
+        if not temp:
+            print("MAAF LOKER KOSONG")
+            return
+
+        n = len(temp)
+        step = int(n ** 0.5)
+        prev = 0
+        while prev < n and temp[prev]['job'] < key:
+            prev += step
+        prev -= step
+        while prev < n:
+            if temp[prev]['job'] == key:
+                return (temp[prev])
+            prev += 1
+        return None
+```
 
 - Method delete
 Method ini berfungsi untuk menghapus suatu data dari dalam database dengan memanfaatkan teknik pencarian jump dari method search yang kemudian akan di hapus dari dalam database menggunakan perintah delete_one
 
-![image](https://user-images.githubusercontent.com/122012870/234680947-a971626a-f1a9-49bc-9222-901bfcdcf718.png)
+```
+    def delete(self):
+        while True:
+            try:
+                self.display()
+                temp = []
+                for i in database.mycol.find({}):
+                    temp.append(i)
+
+                key = str.lower(input("pilih Loker: "))
+                result = self.search(temp , key) 
+
+                if result:
+                    database.mycol.delete_one({"job": key})
+                    print("\nLOKER BERHASIL DIHAPUS!")
+                elif not result:
+                    print("\nLOKER TIDAK DITEMUKAN!")
+                else:
+                    print("\nLOKER TIDAK DITEMUKAN!")
+                break
+
+            except ValueError:
+                    print("\nMOHON ISI SESUAI KETENTUAN!")
+            except KeyboardInterrupt:
+                    print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
+```
 
 - Method lihatuser
 Method ini berfungsi untuk menampilkan seluruh user dari dalam database yang kemudian disusun kedalam sebuah table
 
-![image](https://user-images.githubusercontent.com/122012870/234681386-7461b7f2-e93b-46fd-a3d0-2aa4d3d2bd51.png)
+```
+    def lihatuser(self):
+        datauser = []            
+        for i in database.role.find({}):
+            datauser.append(i)
+
+        if not datauser:
+            print("MAAF PENGGUNA TIDAK ADA")
+        else:
+            table = PrettyTable(['Nama', 'Sebagai'])
+            for x in datauser:
+                table.add_row([x['nama'], x['privilege']])
+            print(table)
+```
 
 - Method load
 
 Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi user yang bertujuan untuk memisahkan antara menu utama dan hasil kerja dari method-method diatas di output nantinya 
 
-![image](https://user-images.githubusercontent.com/122012870/234681787-36c04716-4a6e-415c-9290-a3fa07e19917.png)
+```
+    def load(self):
+        ask = input("\nTekan Enter Untuk Lanjut ...")
+        if ask == "":
+            os.system("cls")
+        else:
+            os.system("cls")
+```
 
 ### ⚙️ File ControlPelamar
 - Mengimport Module dan Library
@@ -122,13 +325,22 @@ Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file l
 
 Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library prettytable yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
 
-![Cuplikan layar 2023-04-27 023551](https://user-images.githubusercontent.com/122012870/234670919-24167021-8171-4b6b-b54a-ef49648ce850.png)
+```
+from Model import database
+from prettytable import PrettyTable
+import os
+```
 
 - Class Node
 
 Class Node adalah untuk mempresentasikan sebuah simpul dalam Linked list
 
-![Cuplikan layar 2023-04-27 023707](https://user-images.githubusercontent.com/122012870/234671236-a7c58ade-dc56-4388-bfba-613382e52277.png)
+```
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+```
 
 - Class LinkedList
 
@@ -136,46 +348,176 @@ Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-nod
 
 Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
 
-![Cuplikan layar 2023-04-27 024025](https://user-images.githubusercontent.com/122012870/234671866-77591dd2-fde7-4c09-8430-bb6f45e264c3.png)
+```
+class LinkedList:
+    def __init__(self):
+        self.head = None
+```
 
 - Method mergeSort
 
 Method ini berfungsi untuk mengurutkan suatu nilai di dalam database, di dalam program ini nilai yang diurutkan adalah gaji. teknik sorting yang digunakan adalah merge sort yaitu teknik sorting yang algoritmanya membagi 2 array secara rekursif yang kemudian memasukkankan kembali ke dalam satu array yang terurut
 
-![image](https://user-images.githubusercontent.com/122012870/234683879-f3fccae8-e105-4756-96a9-608e26fc1b95.png)
+```
+    def mergeSort(self, data):
+            temp = []
+            for i in database.mycol.find({}):
+                temp.append(i)
+
+            if not temp:
+                print("MAAF LOKER KOSONG")
+                return
+            
+            if len(data) > 1:
+                mid = len(data) // 2
+                left = data[:mid]
+                right = data[mid:]
+
+                self.mergeSort(left)
+                self.mergeSort(right)
+
+                i = j = k = 0
+                while i < len(left) and j < len(right):
+                    if left[i]["gaji"] > right[j]["gaji"]:
+                        data[k] = left[i]
+                        i += 1
+                    else:
+                        data[k] = right[j]
+                        j += 1
+                    k += 1
+
+                while i < len(left):
+                    data[k] = left[i]
+                    i += 1
+                    k += 1
+
+                while j < len(right):
+                    data[k] = right[j]
+                    j += 1
+                    k += 1
+            return data
+```
 
 - Method sortList
 
 Method ini berfungsi menampilkan hasil dari method mergeSort yang kemudian hasilnya disimpan dalam variable result 
 
-![image](https://user-images.githubusercontent.com/122012870/234685450-2e7cba30-1525-4d81-a479-b6fbaaf16cf5.png)
+```
+    def sortList(self):
+        temp = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+
+        if not temp:
+            print("MAAF LOKER KOSONG")
+            return
+
+        result = self.mergeSort(temp) 
+
+        print("\nMENGURUTKAN GAJI DARI NOMINAL TERBESAR!")
+        table = PrettyTable(['Bagian Posisi', 'Nama Perusahaan', 'Nominal Gaji', "Email Perusahaan", "Domisili Perusahaan", "Maksimal Umur"])
+        for x in result:
+            table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
+        print(table)
+```
 
 - Method jumpsearch
 Method ini berfungsi untuk mencari suatu nilai nama job yang terdapat di database menggunakan jenis pencarian jump search. Algoritma jump search menggunakan teknik jump atau loncatan untuk melakukan pencarian secara efisien
 
-![image](https://user-images.githubusercontent.com/122012870/234686278-e3e21916-c1f8-4bb0-9e68-cac69c434e9f.png)
+```
+    def jumpsearch(self, temp, key):
+        temp = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+
+        if not temp:
+            print("MAAF LOKER KOSONG")
+            return
+
+        n = len(temp)
+        step = int(n ** 0.5)
+        prev = 0
+        while prev < n and temp[prev]['job'] < key:
+            prev += step
+        prev -= step
+        while prev < n:
+            if temp[prev]['job'] == key:
+                return (temp[prev])
+            prev += 1
+        return None
+```
 
 - Method applypelamar
 
 Method ini berfungsi untuk menampilkan hasil pencarian dari method jumpsearch yang kemudian hasilnya akan tersimpan dalam variable result, hasil dari variable result itu kemudian akan diappend ke dalam list kosong agar nantinya data dapat ditampilkan dalam prettytable. Ketika pengkondisian menyatakan menemukan nilai yang dicari dalam suatu database maka selanjutnya akan tertampil printan berupa persyaratan loker
 
-![image](https://user-images.githubusercontent.com/122012870/234688059-30743e11-728a-463b-92dc-f565239cfd28.png)
+```
+    def applypelamar(self):
+        temp = []
+        col = []
+        for i in database.mycol.find({}):
+            temp.append(i)
+        while True:
+            try:
+                key = str.lower(input("Ingin mendaftar posisi apa: "))
+                result = self.jumpsearch(temp , key) 
+                col.append(result) 
+
+                if result is None:
+                    print("maaf tidak ditemukan")
+                else:
+                    table = PrettyTable(['Bagian Posisi', 'Nama Perusahaan', 'Nominal Gaji', "Email Perusahaan", "Domisili Perusahaan", "Maksimal Umur"])
+                    for x in col:
+                        table.add_row([x['job'], x['perusahaan'], x['gaji'], x['email'], x['domisili'], x['umur']])
+                    print(table)
+                    print('Adapun persyaratan', key, '''yang diperlukan yaitu:
+                    1. Cover Letter
+                    2. CV
+                    3. Portofolio
+                    4. Ijazah dan transkrip nilai
+                    5. Sertifikat dan piagam penghargaan
+                    6. Pas foto terbaru
+                    7. Fotokopi Identitas terbaru
+                    8. SKCK 
+                    ''')
+                break
+                   
+            except ValueError:
+                    print("\nMOHON ISI SESUAI KETENTUAN!")
+            except KeyboardInterrupt:
+                    print("\n\nMAAF PROGRAM TIDAK MENGERTI!")
+```
 
 - Method loading
 
 Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi user yang bertujuan untuk memisahkan antara menu utama dan hasil kerja dari method-method diatas di output nantinya 
 
-![image](https://user-images.githubusercontent.com/122012870/234688451-642c1d29-7781-4998-b740-dc58ceebf5bf.png)
+```
+    def loading(self):
+        ask = input("\nTekan Enter Untuk Lanjut ...")
+        if ask == "":
+            os.system("cls")
+        else:
+            os.system("cls")
+```         
 
 
-### Dalam Folder Model
+### Folder Model
 ![image](https://user-images.githubusercontent.com/122012870/234690947-03aa5e08-a588-49f9-aee3-b8043f63aebe.png)
 ### 📂 File database
 - import module 
 
-
-
-![image](https://user-images.githubusercontent.com/122012870/234691790-22dfb644-6afc-4fe8-a8bb-81242aa6431c.png)
-
+```
+from pymongo import MongoClient
+```
+- mongodb
 - 
+```
+client = MongoClient('mongodb+srv://verasantiwijayaa:s3WNDPpdhS3g7xIX@cluster0.yuyn0jm.mongodb.net/test')
+
+mydb = client["Nama_Database"]
+mycol = mydb["my_collection"]
+role = mydb["Privilege_Login"]
+```
+
 ⛓️🔗💻🗂️📍📌
