@@ -4,22 +4,22 @@ Anggota kelompok:
 - Lidia Aprilia Putri
 - Juventia Adelia Putri 
 
-## Deskripsi Program
+## 📌Deskripsi Program
 - Berikut adalah program project kelompok kami dengan tema lowongan pekerjaan. Tujuan dibuatnya program ini untuk mengelola informasi mengenai lowongan pekerjaan di suatu perusahaan yang meliputi posisi kerja, nama perusahaan, nominal gaji, domisili perusahaan, dan maksimal umur pelamar kerja. Program kami menggunakan database Mongodb untuk menyimpan data-data lowongan pekerjaan diatas. 
 
 -  Pada program kami, terdapat 2 user dengan privilege yang berbeda. Pertama, user admin. Admin memiliki privilege untuk menampilkan seluruh data loker, menambahkan data loker, menghapus data loker, dan melihat seluruh user pelamar. Kedua, user pelamar. Pelamar memiliki privilege untuk melihat daftar data loker, mencari data loker, mengurutkan data loker berdasarkan gaji dari yang terbesar, dan data profil pelamar
 
-## Struktur Project
+## 📌Struktur Project
 
 ![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234656205-60120f74-8c3d-41e9-bfd6-e5917bebce2a.png)
 
 mvc
 
-## Fitur dan Fungsionalitas
+## 📌Fitur dan Fungsionalitas
 
 ### Dalam Folder Controller
 ![Cuplikan layar 2023-04-27 013252](https://user-images.githubusercontent.com/122012870/234656715-b3cd74fc-708f-480c-9340-c0355f9378ce.png)
-### 👩‍💻 File ControlAccount
+### ⚙️ File ControlAccount
 - Mengimport Module dan Library
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model dan file viewadmin serta file viewpelamar yang masing-masingnya berasal dari folder View
@@ -46,7 +46,7 @@ Function profilpelamar adalah program yang menampilkan perintah terkait dengan d
 
 ![Cuplikan layar 2023-04-27 021628](https://user-images.githubusercontent.com/122012870/234666697-941e61ff-e499-4853-b0c1-95b6742b12cf.png)
 
-### 👩‍💻 File ControlLoker
+### ⚙️ File ControlLoker
 - Mengimport Module dan Library
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model 
@@ -109,9 +109,73 @@ Method ini berfungsi untuk menampilkan seluruh user dari dalam database yang kem
 
 ![image](https://user-images.githubusercontent.com/122012870/234681386-7461b7f2-e93b-46fd-a3d0-2aa4d3d2bd51.png)
 
-- Method Load
+- Method load
 
 Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi user yang bertujuan untuk memisahkan antara menu utama dan hasil kerja dari method-method diatas di output nantinya 
 
 ![image](https://user-images.githubusercontent.com/122012870/234681787-36c04716-4a6e-415c-9290-a3fa07e19917.png)
 
+### ⚙️ File ControlPelamar
+- Mengimport Module dan Library
+
+Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model 
+
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library prettytable yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
+
+![Cuplikan layar 2023-04-27 023551](https://user-images.githubusercontent.com/122012870/234670919-24167021-8171-4b6b-b54a-ef49648ce850.png)
+
+- Class Node
+
+Class Node adalah untuk mempresentasikan sebuah simpul dalam Linked list
+
+![Cuplikan layar 2023-04-27 023707](https://user-images.githubusercontent.com/122012870/234671236-a7c58ade-dc56-4388-bfba-613382e52277.png)
+
+- Class LinkedList
+
+Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-node yang terhubung satu sama lain. Dalam Class LinkedList, fungsi def init dan self berperan sebagai konstruktor untuk membuat instance dari class tersebut
+
+Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
+
+![Cuplikan layar 2023-04-27 024025](https://user-images.githubusercontent.com/122012870/234671866-77591dd2-fde7-4c09-8430-bb6f45e264c3.png)
+
+- Method mergeSort
+
+Method ini berfungsi untuk mengurutkan suatu nilai di dalam database, di dalam program ini nilai yang diurutkan adalah gaji. teknik sorting yang digunakan adalah merge sort yaitu teknik sorting yang algoritmanya membagi 2 array secara rekursif yang kemudian memasukkankan kembali ke dalam satu array yang terurut
+
+![image](https://user-images.githubusercontent.com/122012870/234683879-f3fccae8-e105-4756-96a9-608e26fc1b95.png)
+
+- Method sortList
+
+Method ini berfungsi menampilkan hasil dari method mergeSort yang kemudian hasilnya disimpan dalam variable result 
+
+![image](https://user-images.githubusercontent.com/122012870/234685450-2e7cba30-1525-4d81-a479-b6fbaaf16cf5.png)
+
+- Method jumpsearch
+Method ini berfungsi untuk mencari suatu nilai nama job yang terdapat di database menggunakan jenis pencarian jump search. Algoritma jump search menggunakan teknik jump atau loncatan untuk melakukan pencarian secara efisien
+
+![image](https://user-images.githubusercontent.com/122012870/234686278-e3e21916-c1f8-4bb0-9e68-cac69c434e9f.png)
+
+- Method applypelamar
+
+Method ini berfungsi untuk menampilkan hasil pencarian dari method jumpsearch yang kemudian hasilnya akan tersimpan dalam variable result, hasil dari variable result itu kemudian akan diappend ke dalam list kosong agar nantinya data dapat ditampilkan dalam prettytable. Ketika pengkondisian menyatakan menemukan nilai yang dicari dalam suatu database maka selanjutnya akan tertampil printan berupa persyaratan loker
+
+![image](https://user-images.githubusercontent.com/122012870/234688059-30743e11-728a-463b-92dc-f565239cfd28.png)
+
+- Method loading
+
+Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi user yang bertujuan untuk memisahkan antara menu utama dan hasil kerja dari method-method diatas di output nantinya 
+
+![image](https://user-images.githubusercontent.com/122012870/234688451-642c1d29-7781-4998-b740-dc58ceebf5bf.png)
+
+
+### Dalam Folder Model
+![image](https://user-images.githubusercontent.com/122012870/234690947-03aa5e08-a588-49f9-aee3-b8043f63aebe.png)
+### 📂 File database
+- import module 
+
+
+
+![image](https://user-images.githubusercontent.com/122012870/234691790-22dfb644-6afc-4fe8-a8bb-81242aa6431c.png)
+
+- 
+⛓️🔗💻🗂️📍📌
