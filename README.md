@@ -19,7 +19,7 @@ mvc
 
 ### Dalam Folder Controller
 ![Cuplikan layar 2023-04-27 013252](https://user-images.githubusercontent.com/122012870/234656715-b3cd74fc-708f-480c-9340-c0355f9378ce.png)
-#### 👩‍💻 File ControlAccount
+### 👩‍💻 File ControlAccount
 - Mengimport Module dan Library
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model dan file viewadmin serta file viewpelamar yang masing-masingnya berasal dari folder View
@@ -46,7 +46,7 @@ Function profilpelamar adalah program yang menampilkan perintah terkait dengan d
 
 ![Cuplikan layar 2023-04-27 021628](https://user-images.githubusercontent.com/122012870/234666697-941e61ff-e499-4853-b0c1-95b6742b12cf.png)
 
-#### 👩‍💻 File ControlLoker
+### 👩‍💻 File ControlLoker
 - Mengimport Module dan Library
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model 
@@ -65,21 +65,53 @@ Class Node adalah untuk mempresentasikan sebuah simpul dalam Linked list
 
 Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-node yang terhubung satu sama lain. Dalam Class LinkedList, fungsi def init dan self berperan sebagai konstruktor untuk membuat instance dari class tersebut
 
+Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
+
 ![Cuplikan layar 2023-04-27 024025](https://user-images.githubusercontent.com/122012870/234671866-77591dd2-fde7-4c09-8430-bb6f45e264c3.png)
 
 - Method append
 
-Method ini berfungsi untuk menambahkan node baru di bagian akhir linked list. Method kemudian akan membuat istance baru dari class Node dan menyimpan data pada node tersebut. Di dalam kurung method terdapat parameter self yang digunakan oleh seluruh method di dalam Class LinkedList
+Method ini berfungsi untuk menambahkan node baru di bagian akhir linked list. Method kemudian akan membuat istance baru dari class Node dan menyimpan data pada node tersebut.
 
 ![Cuplikan layar 2023-04-27 024623](https://user-images.githubusercontent.com/122012870/234673292-dacdf10c-4dea-497d-b0fe-0e7b40709897.png)
 
 - Method add_data
 
-Method ini berfungsi untuk menambahkan data yang sesuai dengan penempatannya dengan database ke dalam method append. Di dalam kurung method terdapat parameter self yang digunakan oleh seluruh method di dalam Class LinkedList
+Method ini berfungsi untuk menambahkan data yang sesuai dengan penempatannya dengan database ke dalam method append. 
 
 ![Cuplikan layar 2023-04-27 025431](https://user-images.githubusercontent.com/122012870/234675096-bb1e1734-bea4-468f-812c-44bb54b30292.png)
 
+- Method add_database
 
+Method ini berfungsi untuk memasukkan inputan dari user ke dalam database menggunakan salah satu metode mongodb yaitu metode insert_one.
 
+Terdapat pengkondisian yang melibatkan metode isspace python yang berfungsi untuk mencegah inputan kosong masuk ke dalam database
 
+![image](https://user-images.githubusercontent.com/122012870/234677856-973a77da-5e8a-48b1-808e-94c5693a217a.png)
+
+- Method display
+Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam database yang kemudian tersusun di dalam table berkat bantuan dari library prettytable. 
+
+![image](https://user-images.githubusercontent.com/122012870/234678196-ff8186f9-9610-41bb-a8a8-a0f6345f1ec1.png)
+
+- Method search
+Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis pencarian jump search. Algoritma jump menggunakan teknik loncatan untuk melakukan pencarian secara efisien.
+
+![image](https://user-images.githubusercontent.com/122012870/234678903-d6628167-decf-48e5-a4bd-04d1cd92eb4c.png)
+
+- Method delete
+Method ini berfungsi untuk menghapus suatu data dari dalam database dengan memanfaatkan teknik pencarian jump dari method search yang kemudian akan di hapus dari dalam database menggunakan perintah delete_one
+
+![image](https://user-images.githubusercontent.com/122012870/234680947-a971626a-f1a9-49bc-9222-901bfcdcf718.png)
+
+- Method lihatuser
+Method ini berfungsi untuk menampilkan seluruh user dari dalam database yang kemudian disusun kedalam sebuah table
+
+![image](https://user-images.githubusercontent.com/122012870/234681386-7461b7f2-e93b-46fd-a3d0-2aa4d3d2bd51.png)
+
+- Method Load
+
+Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi user yang bertujuan untuk memisahkan antara menu utama dan hasil kerja dari method-method diatas di output nantinya 
+
+![image](https://user-images.githubusercontent.com/122012870/234681787-36c04716-4a6e-415c-9290-a3fa07e19917.png)
 
