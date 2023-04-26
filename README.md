@@ -13,12 +13,13 @@ Anggota kelompok:
 
 ![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234656205-60120f74-8c3d-41e9-bfd6-e5917bebce2a.png)
 
-mvc
  * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
- * 
+ * [Folder Model](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#folder-model)
+
+
 ## 📌Fitur dan Fungsionalitas
 
-### Dalam Folder Controller
+### Folder Controller
 ![Cuplikan layar 2023-04-27 013252](https://user-images.githubusercontent.com/122012870/234656715-b3cd74fc-708f-480c-9340-c0355f9378ce.png)
 ### ⚙️ File ControlAccount
 - Mengimport Module dan Library
