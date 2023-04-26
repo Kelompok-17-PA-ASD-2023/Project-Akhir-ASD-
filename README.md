@@ -1,7 +1,7 @@
 # Project Akhir ASD Kelompok 17
 Anggota kelompok: 
 - Vera Santi Wijaya
-- Lidia
+- Lidia Aprilia Putri
 - Adelia 
 
 ## Deskripsi Program
