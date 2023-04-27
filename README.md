@@ -37,7 +37,7 @@ Anggota kelompok:
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model dan file viewadmin serta file viewpelamar yang masing-masingnya berasal dari folder View
 
-Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library pwinput yang bertugas mengenkripsikan password yang diinput pengguna, kemudian library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi, dan yang terakhir adalah library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library `pwinput` yang bertugas mengenkripsikan password yang diinput pengguna, kemudian library `os` yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi, dan yang terakhir adalah library `time` yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
 
 ```
 from Model import database
@@ -51,11 +51,11 @@ import os, time
 
 Fungsi Login adalah program yang digunakan untuk menampilkan perintah terkait login sebelum masuk ke dalam aplikasi, di dalamnya terdapat percabangan(if, elif, else) yang digunakan untuk mengeksekusi kode tertentu hanya jika kondisi tersebut terpenuhi. 
 
-Di dalam penginputan juga terdapat metode bawaan python diantara adalah lower yang merupakan metode untuk mengubah seluruh karakter menjadi huruf kecil dan capitalize yang merupakan metode untuk mengubah karakter pertama dalam string menjadi huruf kapital sedangkan karakter lainnya adalah huruf kecil.
+Di dalam penginputan juga terdapat metode bawaan python diantara adalah `lower` yang merupakan metode untuk mengubah seluruh karakter menjadi huruf kecil dan `capitalize` yang merupakan metode untuk mengubah karakter pertama dalam string menjadi huruf kapital sedangkan karakter lainnya adalah huruf kecil.
 
-Untuk mencari nama yang sesuai dalam database maka diperlukan find_one, find_one sendiri ialah salah satu metode dalam Mongodb yang selanjutnya hasil pencarian tersebut akan tersimpan dalam variabel result 
+Untuk mencari nama yang sesuai dalam database maka diperlukan `find_one`, find_one sendiri ialah salah satu metode dalam Mongodb yang selanjutnya hasil pencarian tersebut akan tersimpan dalam variabel result 
 
-Penggunaan statement try except dimaksudkan untuk menangani kesalahan penginputan data dari user yang tidak disengaja agar tidak terjadi error di dalam output program nantinya
+Penggunaan statement `try except` dimaksudkan untuk menangani kesalahan penginputan data dari user yang tidak disengaja agar tidak terjadi error di dalam output program nantinya
 
 ```
 def login():
@@ -101,7 +101,7 @@ def login():
 
 - Function profilpelamar
 
-Function profilpelamar adalah program yang menampilkan perintah terkait dengan data-data si pelamar yang telah tersimpan dalam database, menggunakan metode find_one untuk mencari data sesuai nama pelamar yang sedang login
+Function profilpelamar adalah program yang menampilkan perintah terkait dengan data-data si pelamar yang telah tersimpan dalam database, menggunakan metode `find_one` untuk mencari data sesuai nama pelamar yang sedang login
 
 ```
 def profilpelamar():
@@ -122,7 +122,7 @@ def profilpelamar():
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model 
 
-Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library prettytable yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library `prettytable` yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library `os` yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
 
 ```
 from Model import database
@@ -145,7 +145,7 @@ class Node:
 
 Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-node yang terhubung satu sama lain. Dalam Class LinkedList, fungsi def init dan self berperan sebagai konstruktor untuk membuat instance dari class tersebut
 
-Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
+Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter `self` kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
 
 ```
 class LinkedList:
@@ -191,9 +191,9 @@ Method ini berfungsi untuk menambahkan data yang sesuai dengan penempatannya den
 
 - Method add_database
 
-Method ini berfungsi untuk memasukkan inputan dari user ke dalam database menggunakan salah satu metode mongodb yaitu metode insert_one.
+Method ini berfungsi untuk memasukkan inputan dari user ke dalam database menggunakan salah satu metode mongodb yaitu metode `insert_one`
 
-Terdapat pengkondisian yang melibatkan metode isspace python yang berfungsi untuk mencegah inputan kosong masuk ke dalam database
+Terdapat pengkondisian yang melibatkan metode `isspace` python yang berfungsi untuk mencegah inputan kosong masuk ke dalam database
 
 ```
     def add_database(self):
@@ -226,7 +226,7 @@ Terdapat pengkondisian yang melibatkan metode isspace python yang berfungsi untu
 ```
 
 - Method display
-Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam database yang kemudian tersusun di dalam table berkat bantuan dari library prettytable. 
+Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam database yang kemudian tersusun di dalam table berkat bantuan dari library `prettytable`. 
 
 ```
     def display(self):
@@ -244,7 +244,7 @@ Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam da
 ```
 
 - Method search
-Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis pencarian jump search. Algoritma jump menggunakan teknik loncatan untuk melakukan pencarian secara efisien.
+Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis pencarian `jump search`. Algoritma jump menggunakan teknik loncatan untuk melakukan pencarian secara efisien.
 
 ```
     def search(self, temp, key):
@@ -270,7 +270,7 @@ Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis p
 ```
 
 - Method delete
-Method ini berfungsi untuk menghapus suatu data dari dalam database dengan memanfaatkan teknik pencarian jump dari method search yang kemudian akan di hapus dari dalam database menggunakan perintah delete_one
+Method ini berfungsi untuk menghapus suatu data dari dalam database dengan memanfaatkan teknik pencarian jump dari method search yang kemudian akan di hapus dari dalam database menggunakan perintah `delete_one`
 
 ```
     def delete(self):
@@ -335,7 +335,7 @@ Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi u
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini file lain yang dipanggil ialah file database dari folder Model 
 
-Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library prettytable yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library `prettytable` yang bertugas untuk menyusun data ke dalam tabel-tabel agar terlihat rapi dan mudah dibaca, serta ada library `os` yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi.
 
 ```
 from Model import database
@@ -358,7 +358,7 @@ class Node:
 
 Class LinkedList adalah salah satu struktur data yang yang terdiri dari node-node yang terhubung satu sama lain. Dalam Class LinkedList, fungsi def init dan self berperan sebagai konstruktor untuk membuat instance dari class tersebut
 
-Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter self kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
+Nantinya setiap method dalam linked list akan memiliki parameter self. Dengan menggunakan parameter `self` kita dapat mengakses atribut-atribut yang ada pada Class LinkedList
 
 ```
 class LinkedList:
@@ -368,7 +368,7 @@ class LinkedList:
 
 - Method mergeSort
 
-Method ini berfungsi untuk mengurutkan suatu nilai di dalam database, di dalam program ini nilai yang diurutkan adalah gaji. teknik sorting yang digunakan adalah merge sort yaitu teknik sorting yang algoritmanya membagi 2 array secara rekursif yang kemudian memasukkankan kembali ke dalam satu array yang terurut
+Method ini berfungsi untuk mengurutkan suatu nilai di dalam database, di dalam program ini nilai yang diurutkan adalah gaji. teknik sorting yang digunakan adalah `merge sort` yaitu teknik sorting yang algoritmanya membagi 2 array secara rekursif yang kemudian memasukkankan kembali ke dalam satu array yang terurut
 
 ```
     def mergeSort(self, data):
@@ -434,7 +434,7 @@ Method ini berfungsi menampilkan hasil dari method mergeSort yang kemudian hasil
 ```
 
 - Method jumpsearch
-Method ini berfungsi untuk mencari suatu nilai nama job yang terdapat di database menggunakan jenis pencarian jump search. Algoritma jump search menggunakan teknik jump atau loncatan untuk melakukan pencarian secara efisien
+Method ini berfungsi untuk mencari suatu nilai nama job yang terdapat di database menggunakan jenis pencarian `jump search`. Algoritma jump search menggunakan teknik jump atau loncatan untuk melakukan pencarian secara efisien
 
 ```
     def jumpsearch(self, temp, key):
@@ -544,7 +544,7 @@ role = mydb["Privilege_Login"]
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount serta file controlLoker yang masing-masingnya berasal dari folder Controller
 
-Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library `os` yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library `time` yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
 
 ```
 from Controller import controlAccount
@@ -562,7 +562,7 @@ lili = controlLoker.LinkedList()
 
 - Function menuAdmin
 
-function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege admin, yang di dalamnya terdapat looping while True agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalamnya function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda sesuai dengan pilihan yang diinput pengguna yang nantinya menu akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList dan function dalam file controlAccount
+function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege admin, yang di dalamnya terdapat looping `while True` agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalamnya function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda sesuai dengan pilihan yang diinput pengguna yang nantinya menu akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList dan function dalam file controlAccount
 
 ```
 def menuAdmin():
@@ -612,7 +612,7 @@ def menuAdmin():
 
 Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount, file controlLoker, serta file controlPelamar yang ketiga-tiganya berasal dari folder Controller
 
-Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library `os` yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library `time` yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
 
 ```
 from Controller import controlAccount
@@ -632,7 +632,7 @@ lili = controlLoker.LinkedList()
 
 - Function menuPelamar
 
-function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege pelamar, yang di dalamnya terdapat looping while True agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalam function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda pula sesuai dengan pilihan yang diinput pengguna yang nantinya menu tersebut akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList baik dalam file controlPelamar maupun file controlLoker serta function-function dari dalam file controlAccount
+function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege pelamar, yang di dalamnya terdapat looping `while True` agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalam function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda pula sesuai dengan pilihan yang diinput pengguna yang nantinya menu tersebut akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList baik dalam file controlPelamar maupun file controlLoker serta function-function dari dalam file controlAccount
 
 ```
 def menuPelamar():
@@ -679,9 +679,9 @@ def menuPelamar():
 ### File Main
 ![image](https://user-images.githubusercontent.com/122012870/234732578-ba051bef-5e65-412f-ae11-f13565ed4b68.png)
 
-- import modul
+- Import modul
 
-Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount yang berasal dari folder Controller yang diberikan nama alternatif atau nama alias pada modul controlAccount sebagai "c"
+Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount yang berasal dari folder Controller yang diberikan nama alternatif atau nama alias pada modul controlAccount sebagai `c`
 
 ```
 from Controller import controlAccount as c
@@ -689,7 +689,7 @@ from Controller import controlAccount as c
 
 - if __name__ == __main__:
 
-if __name__ == "__main__" pada Python memungkinkan kita untuk menentukan baris tertentu manakah yang akan dijalankan ketika script berbentuk file kita jalankan. pada program berikut baris pertama yang akan di running terlebih dahulu ialah function login pada file controlAccount di dalam folder Controller
+`if __name__ == "__main__"` pada Python memungkinkan kita untuk menentukan baris tertentu manakah yang akan dijalankan ketika script berbentuk file kita jalankan. pada program berikut baris pertama yang akan di running terlebih dahulu ialah function login pada file controlAccount di dalam folder Controller
 
 ```
 if __name__ == "__main__":
