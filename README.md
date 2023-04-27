@@ -14,8 +14,17 @@ Anggota kelompok:
 ![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234656205-60120f74-8c3d-41e9-bfd6-e5917bebce2a.png)
 
  * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
+    * [File controlAccount](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#%EF%B8%8F-file-controlaccount)
+    * [File controlLoker](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#%EF%B8%8F-file-controlloker)
+    * [File controlPelamar](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#%EF%B8%8F-file-controlpelamar)
+    
  * [Folder Model](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#folder-model)
+    * [File database](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#-file-database)
+    
  * [Folder View](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#folder-view)
+    * [File viewadmin](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#-file-viewadmin)
+    * [File viewpelamar](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#-file-viewpelamar)
+    
  * [File Main](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#file-main)
 
 
@@ -509,15 +518,19 @@ Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi u
 ![image](https://user-images.githubusercontent.com/122012870/234690947-03aa5e08-a588-49f9-aee3-b8043f63aebe.png)
 ### 📂 File database
 - import module 
+Dengan mengimport `pymongo`, kita dapat menggunakan semua fungsionalitas yang disediakan oleh library ini. Dan dengan mengimport `MongoClient`, kita dapat membuat koneksi ke server MongoDB dan mengakses database dan koleksi yang ada di dalamnya
 
 ```
 from pymongo import MongoClient
 ```
-- mongodb
-- 
+- Memasukkan URI MongoDB didalam nama variable client dengan bantuan `MongoClient` agar dapat membuat koneksi dan mengakses database didalamnya
+
 ```
 client = MongoClient('mongodb+srv://verasantiwijayaa:s3WNDPpdhS3g7xIX@cluster0.yuyn0jm.mongodb.net/test')
+```
+- Membuat koleksi "my_collection" dan koleksi "Privilege_Login" di dalam database "Nama_Database" di masing-masing variable yang berbeda
 
+```
 mydb = client["Nama_Database"]
 mycol = mydb["my_collection"]
 role = mydb["Privilege_Login"]
