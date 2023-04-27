@@ -1,7 +1,7 @@
 # Project Akhir ASD Kelompok 17
 Anggota kelompok: 
-- Vera Santi Wijaya
-- Lidia Aprilia Putri
+- Vera Santi Wijaya 
+- Lidia Aprilia Putri 
 - Juventia Adelia Putri 
 
 ## 📌Deskripsi Program
@@ -10,8 +10,6 @@ Anggota kelompok:
 -  Pada program kami, terdapat 2 user dengan privilege yang berbeda. Pertama, user admin. Admin memiliki privilege untuk menampilkan seluruh data loker, menambahkan data loker, menghapus data loker, dan melihat seluruh user pelamar. Kedua, user pelamar. Pelamar memiliki privilege untuk melihat daftar data loker, mencari data loker, mengurutkan data loker berdasarkan gaji dari yang terbesar, dan data profil pelamar
 
 ## 📌Struktur Project
-
-![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234656205-60120f74-8c3d-41e9-bfd6-e5917bebce2a.png)
 
  * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
     * [File controlAccount](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#%EF%B8%8F-file-controlaccount)
@@ -27,6 +25,19 @@ Anggota kelompok:
     
  * [File Main](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#file-main)
 
+Model View Controller atau yang dapat disingkat MVC adalah sebuah pola arsitektur dalam membuat sebuah aplikasi dengan cara memisahkan kode menjadi tiga bagian. Implementasi MVC pada Program Aplikasi Loker di Repository Github Pada program kami yang terdiri dari:
+
+- ⚙️ Controller bagian yang bertugas untuk menghubungkan serta mengatur model dan view agar dapat saling terhubung.
+Folder Controller berisi 3 file python, yaitu controlAccount, controlLoker, controlPelamar. Ketiga file tersebut memiliki fungsi yang berbeda-beda. ControlAccount berfungsi untuk mengontrol data admin atau pelamar saat login. ControlLoker berfungsi untuk mengontrol privilege dan aktivitas dari user Admin. ControlPelamar berfungsi untuk mengontrol privilege dan aktivitas dari user Pelamar.
+
+- 📂 Model Bagian yang bertugas untuk menyiapkan, mengatur, memanipulasi, dan mengorganisasikan data yang ada di database.
+Folder Model berisi file python untuk mengakses database Mongodb.
+
+- 💻 View Bagian yang bertugas untuk menampilkan informasi dalam bentuk Graphical User Interface (GUI).
+Folder View berisi 2 file python, yaitu viewadmin dan viewpelamar. Kedua file tersebut berfungsi untuk menampilkan menu pilihan admin dan pelamar yang memiliki privilege berbeda-beda.
+
+- 🔗 Main.
+Selain folder MVC, terdapat file Main yang berisi kode python untuk file utama yang menjalankan semua aktivitas program aplikasi Loker.
 
 ## 📌Fitur dan Fungsionalitas
 
