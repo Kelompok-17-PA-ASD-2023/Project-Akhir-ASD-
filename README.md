@@ -521,4 +521,162 @@ mycol = mydb["my_collection"]
 role = mydb["Privilege_Login"]
 ```
 
-⛓️🔗💻🗂️📍📌
+### Folder View
+![image](https://user-images.githubusercontent.com/122012870/234727047-608e4222-ed2f-4a42-8f0b-4271c0e700fe.png)
+
+### 💻 File viewadmin
+- Mengimport Module dan Library
+
+Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount serta file controlLoker yang masing-masingnya berasal dari folder Controller
+
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
+
+```
+from Controller import controlAccount
+from Controller import controlLoker
+import os, time
+```
+
+- pemanggilan class linked list 
+
+Untuk pemanggilan class LinkedList di dalam file controlLoker yang dideklarasikan dalam variable bernama lili, pemanggilan ini berfungsi agar method-method yang ada di dalam class LinkedList dapat berjalan ketika ingin digunakan
+
+```
+lili = controlLoker.LinkedList()
+```
+
+- Function menuAdmin
+
+function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege admin, yang di dalamnya terdapat looping while True agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalamnya function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda sesuai dengan pilihan yang diinput pengguna yang nantinya menu akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList dan function dalam file controlAccount
+
+```
+def menuAdmin():
+    while True:
+        print("Selamat Datang Admin")
+        pilihadmin = str(input('''
+        ==============================
+        |         MENU  ADMIN        |
+        ==============================
+        |-----Menu yang tersedia-----|
+        |                            |
+        |  1. Display Seluruh Data   |
+        |  2. Tambahkan Data Loker   |
+        |  3. Hapus Data Loker       |
+        |  4. Lihat Seluruh User     |
+        |  5. Sign Out               |
+        |                            |
+        ==============================
+
+    Masukkan Pilihan (1/2/3/4/5): '''))
+
+        if pilihadmin == '1':
+            lili.display()
+            lili.load()
+        elif pilihadmin == '2':
+            lili.add_database()
+            lili.display()
+            lili.load()
+        elif pilihadmin == '3':
+            lili.delete()
+            lili.display()
+            lili.load()
+        elif pilihadmin == '4':
+            lili.lihatuser()
+            lili.load()
+        elif pilihadmin == '5':
+            print("Anda akan diarahkan ke menu login")
+            lili.load()
+            controlAccount.login()
+        else:
+            print('Pilihan anda tidak tersedia')
+            time.sleep(1)
+            os.system("cls")
+```
+### 💻 File viewpelamar
+- Mengimport Module dan Library
+
+Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount, file controlLoker, serta file controlPelamar yang ketiga-tiganya berasal dari folder Controller
+
+Mengimport library dimaksudkan untuk memanfaatkan fungsionalitas dalam library tersebut untuk kebutuhan tertentu, di dalam program ini library yang digunakan adalah library os yang bertugas untuk melakukan berbagai macam operasi yang terkait dengan sistem operasi dan library time yang bertugas untuk melakukan operasi yang berkaitan dengan waktu dan tanggal
+
+```
+from Controller import controlAccount
+from Controller import controlPelamar
+from Controller import controlLoker
+import os, time
+```
+
+- pemanggilan class linked list 
+
+Untuk pemanggilan class LinkedList di dalam file controlLoker yang dideklarasikan dalam variable bernama lili, sedangkan untuk pemanggilan Class LinkedList di dalam file controlPelamar dideklarasikan dalam variable bernama ll. Pemanggilan ini berfungsi agar method-method yang ada di dalam class LinkedList dapat berjalan ketika digunakan
+
+```
+ll = controlPelamar.LinkedList()
+lili = controlLoker.LinkedList()
+```
+
+- Function menuPelamar
+
+function ini berfungsi untuk menampilkan menu yang dimiliki oleh privilege pelamar, yang di dalamnya terdapat looping while True agar menu dapat terus berjalan secara berulang-ulang. Selain itu, di dalam function ini terdapat bercabangan(if-elif-else) yang dimana setiap pengkodisian yang berbeda akan menampilkan menu yang berbeda pula sesuai dengan pilihan yang diinput pengguna yang nantinya menu tersebut akan berhubungan langsung dengan method-method yang ada di dalam Class LinkedList baik dalam file controlPelamar maupun file controlLoker serta function-function dari dalam file controlAccount
+
+```
+def menuPelamar():
+    while True:
+        print("Percayakan Loker Pada Kami!")
+        pilihadmin = str(input('''
+        ==============================
+        |        MENU PELAMAR        |
+        ==============================
+        |-----Menu yang tersedia-----|
+        |                            |
+        |  1. Lihat Daftar Loker     |
+        |  2. Cari dan Daftar Loker  |
+        |  3. Urutkan Gaji Loker     |
+        |  4. Profil Pelamar         |
+        |  5. Sign Out               |
+        |                            |
+        ==============================
+
+    Masukkan Pilihan (1/2/3/4/5): '''))
+
+        if pilihadmin == '1':
+            lili.display()
+            ll.loading()
+        elif pilihadmin == '2':
+            ll.applypelamar()
+            ll.loading()
+        elif pilihadmin == '3':
+            ll.sortList()
+            ll.loading()
+        elif pilihadmin == '4':
+            controlAccount.profilpelamar()
+            ll.loading()
+        elif pilihadmin == '5':
+            print("Anda akan diarahkan ke menu login")
+            ll.loading()
+            controlAccount.login()
+        else:
+            print('Pilihan anda tidak tersedia')
+            time.sleep(1)
+            os.system("cls")
+```
+
+### File Main
+![image](https://user-images.githubusercontent.com/122012870/234732578-ba051bef-5e65-412f-ae11-f13565ed4b68.png)
+
+- import modul
+
+Mengimport module berfungsi sebagai multi file yaitu agar dapat memanggil file lain di dalam satu module yang berbeda, pada file ini, file lain yang dipanggil ialah file controlAccount yang berasal dari folder Controller yang diberikan nama alternatif atau nama alias pada modul controlAccount sebagai "c"
+
+```
+from Controller import controlAccount as c
+```
+
+- if __name__ == __main__:
+
+if __name__ == "__main__" pada Python memungkinkan kita untuk menentukan baris tertentu manakah yang akan dijalankan ketika script berbentuk file kita jalankan. pada program berikut baris pertama yang akan di running terlebih dahulu ialah function login pada file controlAccount di dalam folder Controller
+
+```
+if __name__ == "__main__":
+    c.login()
+```
