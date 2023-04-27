@@ -21,5 +21,3 @@ Pada program kami, pengimplementasian MVC dilakukan dengan membagi 3 folder di G
 C. Main
 Selain folder MVC, terdapat file Main yang berisi kode python untuk file utama yang menjalankan semua aktivitas program aplikasi Loker. 
 
-D. Readme
-Readme berisi penjelasan detail beserta dokumentasi mengenai program aplikasi Loker kelompok kami.
