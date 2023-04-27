@@ -549,6 +549,14 @@ mycol = mydb["my_collection"]
 role = mydb["Privilege_Login"]
 ```
 
+- Database MongoDb untuk koleksi "my_collection"
+
+![image](https://user-images.githubusercontent.com/122012870/234924287-1b604555-f7c8-4b70-9a81-317b65678767.png)
+
+- Database MongoDb untuk koleksi "Privilege_Login"
+
+![image](https://user-images.githubusercontent.com/122012870/234925312-1bd449bc-1f0e-4ad8-b8d0-ff2fa3ccd616.png)
+
 ### Folder View
 ![image](https://user-images.githubusercontent.com/122012870/234727047-608e4222-ed2f-4a42-8f0b-4271c0e700fe.png)
 
