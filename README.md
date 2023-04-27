@@ -1,5 +1,5 @@
 # Project Akhir ASD Kelompok 17
-Anggota kelompok: 
+Anggota kelompok : 
 - Vera Santi Wijaya 
 - Lidia Aprilia Putri 
 - Juventia Adelia Putri 
