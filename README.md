@@ -590,7 +590,7 @@ from Controller import controlLoker
 import os, time
 ```
 
-- pemanggilan class linked list 
+- Pemanggilan class linked list 
 
 Untuk pemanggilan class LinkedList di dalam file controlLoker yang dideklarasikan dalam variable bernama lili, pemanggilan ini berfungsi agar method-method yang ada di dalam class LinkedList dapat berjalan ketika ingin digunakan
 
@@ -659,7 +659,7 @@ from Controller import controlLoker
 import os, time
 ```
 
-- pemanggilan class linked list 
+- Pemanggilan class linked list 
 
 Untuk pemanggilan class LinkedList di dalam file controlLoker yang dideklarasikan dalam variable bernama lili, sedangkan untuk pemanggilan Class LinkedList di dalam file controlPelamar dideklarasikan dalam variable bernama ll. Pemanggilan ini berfungsi agar method-method yang ada di dalam class LinkedList dapat berjalan ketika digunakan
 
