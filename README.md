@@ -729,61 +729,64 @@ if __name__ == "__main__":
 
 ### LOGIN BERHASIL
 
-📍Ketika user pertama kali masuk ke dalam aplikasi LOKER, User akan dihadapkan pada halaman awal login, di halaman ini User diharuskan untuk mengisi username dan password.
+- 📍Ketika user pertama kali masuk ke dalam aplikasi LOKER, User akan dihadapkan pada halaman awal login, di halaman ini User diharuskan untuk mengisi username dan password.
 
 ![Cuplikan layar 2023-04-29 174944](https://user-images.githubusercontent.com/122012870/235299301-e4ae2599-acb6-4031-865b-bd0e7750d32d.png)
-📍Ketika username dan password yang dimiliki Admin dinyatakan benar oleh program, maka selanjutnya halaman yang berisikan menu-menu yang hanya dapat diakses oleh Admin akan tertampil di dalam aplikasi LOKER
 
-![Cuplikan layar 2023-04-29 161358](https://user-images.githubusercontent.com/122012870/235292433-1a88a2c7-1d2c-41cc-912d-639c5a0cab69.png)
+### MASUK SEBAGAI USER ADMIN
 
-📍Di halaman menu, Admin diminta untuk memilih opsi nomor menu sesuai dengan keinginan dan kebutuhan Admin
+- 📍Ketika username dan password yang dimiliki Admin dinyatakan benar oleh program, maka selanjutnya halaman yang berisikan menu-menu yang hanya dapat diakses oleh Admin akan tertampil di dalam aplikasi LOKER
 
-![image](https://user-images.githubusercontent.com/122012870/235292407-752b1630-ff9e-44f5-aa84-8bfa40378873.png)
+![Cuplikan layar 2023-04-29 175044](https://user-images.githubusercontent.com/122012870/235299387-294ad0d1-1b7a-4cb4-b4dd-869d87ee1fba.png)
 
-📍Ketika Admin memilih menu Display Seluruh Data pada nomor menu 1, maka kemudian program akan menampilkan tabel yang berisikan data-data lowongan pekerjaan yang telah tersimpan dalam server database sebelumnya, seperti hal nya bagian posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan umur maksimal pekerja
+- 📍Di halaman menu, Admin diminta untuk memilih opsi nomor menu sesuai dengan keinginan dan kebutuhan Admin
 
-![image](https://user-images.githubusercontent.com/122012870/235292517-f1823d1e-c84b-4c6c-8988-9807fc8b4a50.png)
+![Cuplikan layar 2023-04-29 175113](https://user-images.githubusercontent.com/122012870/235299389-a32b7190-cddd-43b3-95d4-f568b14feba8.png)
 
-📍 Ketika Admin memilih menu Tambahkan Data Loker pada nomor menu 2, maka kemudian program akan mengharuskan Admin untuk mengisi keseluruhan data-data baru  yang berkaitan dengan lowongan pekerjaan, seperti halnya posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan maksimal umur pekerja. Data berikut harus diisi secara lengkap tanpa ada  pengosongan penginputan dan pengisian data harus sesuai arahan
+- 📍Ketika Admin memilih menu Display Seluruh Data pada nomor menu 1, maka kemudian program akan menampilkan tabel yang berisikan data-data lowongan pekerjaan yang telah tersimpan dalam server database sebelumnya, seperti halnya bagian posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan umur maksimal pekerja
 
-![image](https://user-images.githubusercontent.com/122012870/235292827-a80a392b-d0db-4612-8f6d-ef08fb986482.png)
+![Cuplikan layar 2023-04-29 175141](https://user-images.githubusercontent.com/122012870/235299446-a33e940a-8bdd-447b-924b-1ae90a3f874d.png)
 
-📍Ketika admin memilih menu Hapus Data Loker pada nomor menu 3, maka kemudian program akan meminta Admin untuk menginput nama posisi job yang ingin dihapus, jika nama posisi job yang tersimpan dalam database sesuai dengan inputan Admin maka seluruh data dari posisi job tersebut akan terhapus dari dalam aplikasi maupun dari dalam penyimpanan database
+- 📍 Ketika Admin memilih menu Tambahkan Data Loker pada nomor menu 2, maka kemudian program akan mengharuskan Admin untuk mengisi keseluruhan data-data baru  yang berkaitan dengan lowongan pekerjaan, seperti halnya posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan maksimal umur pekerja. Data berikut harus diisi secara lengkap tanpa ada pengosongan penginputan dan pengisian data harus sesuai arahan
 
-![image](https://user-images.githubusercontent.com/122012870/235293230-7c5bcf6c-7b8c-4f22-a484-949de7396fc4.png)
+![Cuplikan layar 2023-04-29 175318](https://user-images.githubusercontent.com/122012870/235299482-6d5a7404-e8dc-4513-95a5-e5049324de3d.png)
 
-📍Ketika admin memilih menu Lihat Seluruh User pada nomor menu 4, maka kemudian program akan menampilkan tabel yang berisikan sejumlah user lain di dalam aplikasi LOKER tersebut
+- 📍Ketika admin memilih menu Hapus Data Loker pada nomor menu 3, maka kemudian program akan meminta Admin untuk menginput nama posisi job yang ingin dihapus, jika nama posisi job yang tersimpan dalam database sesuai dengan inputan Admin maka seluruh data dari posisi job tersebut akan terhapus dari dalam aplikasi maupun dari dalam penyimpanan database
 
-![image](https://user-images.githubusercontent.com/122012870/235293322-b234b30e-b3c5-43c0-8f2f-e74af42d7d29.png)
+![Cuplikan layar 2023-04-29 175420](https://user-images.githubusercontent.com/122012870/235299542-610a58eb-65c3-4816-8b92-1dbc66132592.png)
 
-📍Ketika admin memilih menu Sign Out pada nomor menu 5, program akan kembali ke halaman awal aplikasi yaitu halaman login User
+- 📍Ketika admin memilih menu Lihat Seluruh User pada nomor menu 4, maka kemudian program akan menampilkan tabel yang berisikan sejumlah user lain di dalam aplikasi LOKER tersebut
 
-![Cuplikan layar 2023-04-29 163340](https://user-images.githubusercontent.com/122012870/235293369-cf06ed2f-5777-4a9f-864d-88324eb518de.png)
+![Cuplikan layar 2023-04-29 175457](https://user-images.githubusercontent.com/122012870/235299562-6aeb2bac-e486-4622-a803-38ca26d0b9fc.png)
 
-![image](https://user-images.githubusercontent.com/122012870/235293374-e054b40e-fd30-412c-9434-3d4ef26df4a6.png)
+- 📍Ketika admin memilih menu Sign Out pada nomor menu 5, program akan kembali ke halaman awal aplikasi yaitu halaman login User
 
-📍Namun ketika Admin salah menginputkan nomor menu maka program akan memastikan lagi untuk meminta nomor menu kembali hingga nomor menu tersebut dinyatakan sesuai dengan nomor menu yang ada di dalam aplikasi LOKER
+![Cuplikan layar 2023-04-29 175524](https://user-images.githubusercontent.com/122012870/235299696-0476cdd8-65da-4116-99b8-4f60119fae1c.png)
 
-![image](https://user-images.githubusercontent.com/122012870/235293538-1e4ab401-4768-40f4-ae3a-523c2622f038.png)
+![Cuplikan layar 2023-04-29 182404](https://user-images.githubusercontent.com/122012870/235299612-193ce4ca-b3fb-4955-af05-e881b28e9264.png)
 
-##### USER PELAMAR
+- 📍Namun ketika Admin salah menginputkan nomor menu maka program akan memastikan lagi untuk meminta nomor menu kembali hingga nomor menu tersebut dinyatakan sesuai dengan nomor menu yang ada di dalam aplikasi LOKER
 
-👩‍💻Ketika username dan password yang dimiliki oleh salah satu Pelamar dinyatakan benar oleh program, maka selanjutnya halaman yang berisikan menu-menu yang hanya dapat diakses oleh Pelamar akan tertampil di dalam aplikasi LOKER
+![Cuplikan layar 2023-04-29 175642](https://user-images.githubusercontent.com/122012870/235299697-5fa66eb7-49d8-4e87-aa70-d80d07bc6e97.png)
 
-![Cuplikan layar 2023-04-29 163510](https://user-images.githubusercontent.com/122012870/235293458-68bea963-c90d-40cc-a947-09713b4236d5.png)
+### MASUK SEBAGAI USER PELAMAR
 
-👩‍💻Di halaman menu, Pelamar diminta untuk memilih opsi nomor menu yang sesuai dengan keinginan dan kebutuhan si Pelamar
+- 👩‍💻Ketika username dan password yang dimiliki oleh salah satu Pelamar dinyatakan benar oleh program, maka selanjutnya halaman yang berisikan menu-menu yang hanya dapat diakses oleh Pelamar akan tertampil di dalam aplikasi LOKER
 
-![image](https://user-images.githubusercontent.com/122012870/235293583-8ed84080-524a-4c7e-a95e-a9902f029cb2.png)
+![Cuplikan layar 2023-04-29 175729](https://user-images.githubusercontent.com/122012870/235299757-1aef5833-c05f-4b7f-a568-ad1e3ead83c3.png)
 
-👩‍💻Jika Pelamar ingin melihat seluruh data-data mengenai lowongan pekerjaan yang telah tersedia dalam aplikasi LOKER, Pelamar dapat memilih nomor menu 1. Pada pilihan menu ini, Pelamar akan melihat tampilan tabel-tabel yang berisikan seluruh informasi terkait lowongan pekerjaan tersebut seperti halnya bagian posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan umur maksimal pekerja
+- 👩‍💻Di halaman menu, Pelamar diminta untuk memilih opsi nomor menu yang sesuai dengan keinginan dan kebutuhan si Pelamar
 
-![image](https://user-images.githubusercontent.com/122012870/235293795-4896a4bb-ce22-415d-a07c-b95a85e49289.png)
+![Cuplikan layar 2023-04-29 175754](https://user-images.githubusercontent.com/122012870/235299758-243380d4-154a-4f08-a2a7-170f444576e6.png)
 
-👩‍💻Jika Pelamar ingin mencari dan mendaftar pekerjaan, Pelamar dapat memilih nomor menu 2. Pada pilihan menu ini Pelamar akan diminta untuk menginputkan nama posisi job yang ingin dicari, ketika nama posisi job ditemukan dalam server database LOKER, program akan menampilkan seluruh data-data yang terkait posisi job itu disertai dengan syarat-syarat untuk mendaftar pekerjaan tersebut
+- 👩‍💻Jika Pelamar ingin melihat seluruh data-data mengenai lowongan pekerjaan yang telah tersedia dalam aplikasi LOKER, Pelamar dapat memilih nomor menu 1. Pada pilihan menu ini, Pelamar akan melihat tampilan tabel-tabel yang berisikan seluruh informasi terkait lowongan pekerjaan tersebut seperti halnya bagian posisi job, nama perusahaan, nominal gaji, email perusahaan, domisili perusahaan, dan umur maksimal pekerja
 
-![image](https://user-images.githubusercontent.com/122012870/235293951-04685ee3-6d2a-4465-93d0-7af66c4b2eab.png)
+![Cuplikan layar 2023-04-29 175823](https://user-images.githubusercontent.com/122012870/235299760-c1a57c06-ce03-4686-9d94-6e05a80b8225.png)
 
-👩‍💻Jika Pelamar ingin melihat seluruh posisi job dimulai dengan gaji job yang paling tertinggi, Pelamar dapat memilih nomor menu 3. Pada pilihan menu ini Pelamar akan melihat tampilan keseluruhan informasi lowongan pekerjaan yang diawali dengan posisi job yang teratas dengan nominal gaji tertinggi hingga pada job dengan nominal gaji terendah yang berada di dalam aplikasi LOKER
+- 👩‍💻Jika Pelamar ingin mencari dan mendaftar pekerjaan, Pelamar dapat memilih nomor menu 2. Pada pilihan menu ini Pelamar akan diminta untuk menginputkan nama posisi job yang ingin dicari, ketika nama posisi job ditemukan dalam server database LOKER, program akan menampilkan seluruh data-data yang terkait posisi job itu disertai dengan syarat-syarat untuk mendaftar pekerjaan tersebut
+
+![Cuplikan layar 2023-04-29 180001](https://user-images.githubusercontent.com/122012870/235299762-7bb63ada-e88e-4ba4-866b-ab1da6e1c45d.png)
+
+- 👩‍💻Jika Pelamar ingin melihat seluruh posisi job dimulai dengan gaji job yang paling tertinggi, Pelamar dapat memilih nomor menu 3. Pada pilihan menu ini Pelamar akan melihat tampilan keseluruhan informasi lowongan pekerjaan yang diawali dengan posisi job yang teratas dengan nominal gaji tertinggi hingga pada job dengan nominal gaji terendah yang berada di dalam aplikasi LOKER
 
 ![image](https://user-images.githubusercontent.com/122012870/235294122-367efc3f-c6fa-4237-9621-8018aa70e697.png)
