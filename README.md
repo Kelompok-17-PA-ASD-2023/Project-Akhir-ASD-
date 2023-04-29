@@ -327,6 +327,7 @@ Method ini berfungsi untuk menghapus suatu data dari dalam database dengan meman
 ```
 
 - Method lihatuser
+
 Method ini berfungsi untuk menampilkan seluruh user dari dalam database yang kemudian disusun kedalam sebuah table
 
 ```
