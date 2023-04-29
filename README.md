@@ -296,6 +296,7 @@ Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis p
 ```
 
 - Method delete
+
 Method ini berfungsi untuk menghapus suatu data dari dalam database dengan memanfaatkan teknik pencarian jump dari method search yang kemudian akan di hapus dari dalam database menggunakan perintah `delete_one`
 
 ```
