@@ -250,6 +250,7 @@ Terdapat pengkondisian yang melibatkan metode `isspace` python yang berfungsi un
 ```
 
 - Method display
+
 Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam database yang kemudian tersusun di dalam table berkat bantuan dari library `prettytable`. 
 
 ```
