@@ -33,7 +33,7 @@ Anggota kelompok :
     
  * [File Main](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#file-main)
 
-#### Model View Controller atau yang dapat disingkat MVC adalah sebuah pola arsitektur dalam membuat sebuah aplikasi dengan cara memisahkan kode menjadi tiga bagian. Implementasi MVC pada Program Aplikasi Loker di Repository Github Pada program kami yang terdiri dari :
+#### Model View Controller atau yang dapat disingkat MVC adalah sebuah pola arsitektur dalam membuat sebuah aplikasi dengan cara memisahkan kode menjadi tiga bagian. Implementasi MVC pada Program Aplikasi Loker di Repository Github kelompok kami terdiri dari :
 
 ![Cuplikan layar 2023-04-27 012912](https://user-images.githubusercontent.com/122012870/234919368-b31fdda1-5ddc-4acb-9ee9-ac7e2181cf9c.png)
 
