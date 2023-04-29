@@ -269,6 +269,7 @@ Method ini berfungsi untuk menampilkan seluruh data-data yang berada di dalam da
 ```
 
 - Method search
+
 Method ini berfungsi untuk mencari suatu data dalam database menggunakan jenis pencarian `jump search`. Algoritma jump menggunakan teknik loncatan untuk melakukan pencarian secara efisien.
 
 ```
