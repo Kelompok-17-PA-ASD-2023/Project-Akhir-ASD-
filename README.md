@@ -791,4 +791,23 @@ if __name__ == "__main__":
 
 ![Cuplikan layar 2023-04-29 180050](https://user-images.githubusercontent.com/122012870/235299940-bceea3db-a5d4-43a9-ae70-b81ee78aa8a9.png)
 
-- 
+- Jika Pelamar ingin melihat seluruh profil dirinya, Pelamar dapat memilih nomor menu 4. Pada pilihan menu ini Pelamar akan melihat biodata maupun CV dari si Pelamar tersebut, informasi itu antara lain adalah nama, tanggal lahir, email, pendidikan, jurusan dari si Pelamar, serta tahun bergabung Pelamar kedalam aplikasi LOKER
+
+![Cuplikan layar 2023-04-29 174532](https://user-images.githubusercontent.com/122012870/235300091-fe0add75-7c50-4ad0-b9e3-d6dd27362464.png)
+
+- Jika Pelamar ingin sign out pada aplikasi LOKER, Pelamar dapat memilih nomor menu 5. Menu ini akan membawa kembali si Pelamar ke halaman awal aplikasi yaitu halaman login User
+
+![Cuplikan layar 2023-04-29 174751](https://user-images.githubusercontent.com/122012870/235300195-d650a2ba-e307-4184-b4a5-1e7a772976be.png)
+
+![Cuplikan layar 2023-04-29 174847](https://user-images.githubusercontent.com/122012870/235300197-213a26d6-2cf6-4c10-920a-7f9900c06065.png)
+
+- Namun jika Pelamar salah menginputkan nomor menu, maka program akan memastikan lagi untuk meminta nomor menu kembali hingga nomor menu tersebut dinyatakan sesuai dengan nomor menu yang ada di dalam aplikasi LOKER
+
+![Cuplikan layar 2023-04-29 180217](https://user-images.githubusercontent.com/122012870/235300223-e1471c3d-f900-4fb4-93cb-f317e8e7f0c5.png)
+
+### LOGIN GAGAL 
+
+- Ketika User salah menginputkan username maupun password, maka login akan ditolak dan program tidak akan beralih ke halaman menu aplikasi selanjutnya
+
+![Cuplikan layar 2023-04-29 180339](https://user-images.githubusercontent.com/122012870/235300257-780a69e0-fd6c-4604-8966-ea62698bbb47.png)
+
