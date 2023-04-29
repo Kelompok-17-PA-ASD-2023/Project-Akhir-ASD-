@@ -1,4 +1,6 @@
 # Project Akhir ASD Kelompok 17
+# APLIKASI LOKER
+
 Anggota kelompok : 
 - Vera Santi Wijaya (2209116007)
 - Juventia Adelia Putri (2209116032)
@@ -7,15 +9,9 @@ Anggota kelompok :
 ## 📌Deskripsi Program
 - Berikut adalah program project kelompok kami dengan tema lowongan pekerjaan. Tujuan dibuatnya program ini untuk mengelola informasi mengenai lowongan pekerjaan di suatu perusahaan yang meliputi posisi kerja, nama perusahaan, nominal gaji, domisili perusahaan, dan maksimal umur pelamar kerja. Program kami menggunakan database Mongodb untuk menyimpan data-data lowongan pekerjaan diatas. 
 
--  Pada program kami, terdapat 2 user dengan privilege yang berbeda. Pertama, user admin. Admin memiliki privilege untuk menampilkan seluruh data loker, menambahkan data loker, menghapus data loker, dan melihat seluruh user pelamar. 
+-  Pada program kami, terdapat 2 user dengan privilege yang berbeda. Pertama, user admin. Admin memiliki privilege untuk menampilkan seluruh data loker, menambahkan data loker, menghapus data loker, dan melihat seluruh user pelamar. Kedua, user pelamar. Pelamar memiliki privilege untuk melihat daftar data loker, mencari data loker, mengurutkan data loker berdasarkan gaji dari yang terbesar, dan data profil pelamar.
 
--  Kedua, user pelamar. Pelamar memiliki privilege untuk melihat daftar data loker, mencari data loker, mengurutkan data loker berdasarkan gaji dari yang terbesar, dan data profil pelamar.
-
-- Untuk struktur di database Mongodb pada program kami terdiri dari dua Collection yaitu "my_collection" dan "privilege_login". 
-
-- Pada "my_collection", terdapat 6 Documents yang memiliki Fields "_id" sebagai Primary Key, "job", "perusahaan", "gaji", "email", "domisili", dan "umur". 
-
-- Untuk Collection "privilege_login", terdapat 4 Documents dengan satu Document memiliki Fields "_id" sebagai Primary Key, "nama", "pass", dan "privilege". Untuk ketiga Documents lainnya memiliki Fields "_id" sebagai Primary Key, "nama", "pass", "email", "pendidikan", "jurusan", "privilege", "tahun", dan "lahir".
+- Untuk struktur di database Mongodb pada program kami terdiri dari dua Collection yaitu "my_collection" dan "privilege_login". Pada "my_collection", terdapat 6 Documents yang memiliki Fields "_id" sebagai Primary Key, "job", "perusahaan", "gaji", "email", "domisili", dan "umur". Untuk Collection "privilege_login", terdapat 4 Documents dengan satu Document memiliki Fields "_id" sebagai Primary Key, "nama", "pass", dan "privilege". Untuk ketiga Documents lainnya memiliki Fields "_id" sebagai Primary Key, "nama", "pass", "email", "pendidikan", "jurusan", "privilege", "tahun", dan "lahir".
 
 ## 📌Struktur Project
 
