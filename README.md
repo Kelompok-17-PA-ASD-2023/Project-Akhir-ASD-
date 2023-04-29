@@ -38,7 +38,9 @@ Anggota kelompok :
 Bagian yang bertugas untuk menghubungkan serta mengatur model dan view agar dapat saling terhubung.
 Folder Controller berisi 3 file python, yaitu controlAccount, controlLoker, controlPelamar. Ketiga file tersebut memiliki fungsi yang berbeda-beda. ControlAccount berfungsi untuk mengontrol data admin atau pelamar saat login. ControlLoker berfungsi untuk mengontrol privilege dan aktivitas dari user Admin. ControlPelamar berfungsi untuk mengontrol privilege dan aktivitas dari user Pelamar.
 
-- 📂 Model Bagian yang bertugas untuk menyiapkan, mengatur, memanipulasi, dan mengorganisasikan data yang ada di database.
+- 📂 Model:
+
+Bagian yang bertugas untuk menyiapkan, mengatur, memanipulasi, dan mengorganisasikan data yang ada di database.
 Folder Model berisi file python untuk mengakses database Mongodb.
 
 - 💻 View Bagian yang bertugas untuk menampilkan informasi dalam bentuk Graphical User Interface (GUI).
