@@ -43,7 +43,9 @@ Folder Controller berisi 3 file python, yaitu controlAccount, controlLoker, cont
 Bagian yang bertugas untuk menyiapkan, mengatur, memanipulasi, dan mengorganisasikan data yang ada di database.
 Folder Model berisi file python untuk mengakses database Mongodb.
 
-- 💻 View Bagian yang bertugas untuk menampilkan informasi dalam bentuk Graphical User Interface (GUI).
+- 💻 View: 
+
+Bagian yang bertugas untuk menampilkan informasi dalam bentuk Graphical User Interface (GUI).
 Folder View berisi 2 file python, yaitu viewadmin dan viewpelamar. Kedua file tersebut berfungsi untuk menampilkan menu pilihan admin dan pelamar yang memiliki privilege berbeda-beda.
 
 - 🔗 Main.
