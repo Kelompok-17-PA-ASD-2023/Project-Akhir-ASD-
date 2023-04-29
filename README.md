@@ -727,10 +727,11 @@ if __name__ == "__main__":
 
 ## 📌Cara Penggunaan
 
+### LOGIN BERHASIL
+
 📍Ketika user pertama kali masuk ke dalam aplikasi LOKER, User akan dihadapkan pada halaman awal login, di halaman ini User diharuskan untuk mengisi username dan password.
 
-![image](https://user-images.githubusercontent.com/122012870/235292171-78fbc48f-a088-4960-8101-97238076bcd8.png)
-
+![Cuplikan layar 2023-04-29 174944](https://user-images.githubusercontent.com/122012870/235299301-e4ae2599-acb6-4031-865b-bd0e7750d32d.png)
 📍Ketika username dan password yang dimiliki Admin dinyatakan benar oleh program, maka selanjutnya halaman yang berisikan menu-menu yang hanya dapat diakses oleh Admin akan tertampil di dalam aplikasi LOKER
 
 ![Cuplikan layar 2023-04-29 161358](https://user-images.githubusercontent.com/122012870/235292433-1a88a2c7-1d2c-41cc-912d-639c5a0cab69.png)
