@@ -11,6 +11,8 @@ Anggota kelompok :
 
 - Untuk struktur di database Mongodb pada program kami terdiri dari dua Collection yaitu "my_collection" dan "privilege_login". 
 
+- Pada "my_collection", terdapat 6 Documents yang memiliki Fields "_id" sebagai Primary Key, "job", "perusahaan", "gaji", "email", "domisili", dan "umur". 
+
 ## 📌Struktur Project
 
  * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
