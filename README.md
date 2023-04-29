@@ -462,6 +462,7 @@ Method ini berfungsi menampilkan hasil dari method mergeSort yang kemudian hasil
 ```
 
 - Method jumpsearch
+
 Method ini berfungsi untuk mencari suatu nilai nama job yang terdapat di database menggunakan jenis pencarian `jump search`. Algoritma jump search menggunakan teknik jump atau loncatan untuk melakukan pencarian secara efisien
 
 ```
@@ -546,6 +547,7 @@ Method ini berfungsi untuk menampilkan perintah inputan enter yang harus diisi u
 ![image](https://user-images.githubusercontent.com/122012870/234690947-03aa5e08-a588-49f9-aee3-b8043f63aebe.png)
 ### 📂 File database
 - import module 
+
 Dengan mengimport `pymongo`, kita dapat menggunakan semua fungsionalitas yang disediakan oleh library ini. Dan dengan mengimport `MongoClient`, kita dapat membuat koneksi ke server MongoDB dan mengakses database dan koleksi yang ada di dalamnya
 
 ```
