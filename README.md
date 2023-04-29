@@ -13,6 +13,8 @@ Anggota kelompok :
 
 - Pada "my_collection", terdapat 6 Documents yang memiliki Fields "_id" sebagai Primary Key, "job", "perusahaan", "gaji", "email", "domisili", dan "umur". 
 
+- Untuk Collection "privilege_login", terdapat 4 Documents dengan satu Document memiliki Fields "_id" sebagai Primary Key, "nama", "pass", dan "privilege". Untuk ketiga Documents lainnya memiliki Fields "_id" sebagai Primary Key, "nama", "pass", "email", "pendidikan", "jurusan", "privilege", "tahun", dan "lahir".
+
 ## 📌Struktur Project
 
  * [Folder Controller](https://github.com/Kelompok-17-PA-ASD-2023/Project-Akhir-ASD-/edit/main/README.md#dalam-folder-controller)
