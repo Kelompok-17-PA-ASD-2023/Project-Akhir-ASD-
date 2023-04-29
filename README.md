@@ -48,7 +48,8 @@ Folder Model berisi file python untuk mengakses database Mongodb.
 Bagian yang bertugas untuk menampilkan informasi dalam bentuk Graphical User Interface (GUI).
 Folder View berisi 2 file python, yaitu viewadmin dan viewpelamar. Kedua file tersebut berfungsi untuk menampilkan menu pilihan admin dan pelamar yang memiliki privilege berbeda-beda.
 
-- 🔗 Main.
+- 🔗 Main:
+
 Selain folder MVC, terdapat file Main yang berisi kode python untuk file utama yang menjalankan semua aktivitas program aplikasi Loker.
 
 ## 📌Fitur dan Fungsionalitas
