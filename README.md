@@ -727,9 +727,9 @@ if __name__ == "__main__":
 
 ## 📌Cara Penggunaan
 
-### LOGIN BERHASIL
+### 🔹LOGIN BERHASIL
 
-- 📍Ketika user pertama kali masuk ke dalam aplikasi LOKER, User akan dihadapkan pada halaman awal login, di halaman ini User diharuskan untuk mengisi username dan password.
+- Ketika user pertama kali masuk ke dalam aplikasi LOKER, User akan dihadapkan pada halaman awal login, di halaman ini User diharuskan untuk mengisi username dan password.
 
 ![Cuplikan layar 2023-04-29 174944](https://user-images.githubusercontent.com/122012870/235299301-e4ae2599-acb6-4031-865b-bd0e7750d32d.png)
 
@@ -791,7 +791,7 @@ if __name__ == "__main__":
 
 ![Cuplikan layar 2023-04-29 180050](https://user-images.githubusercontent.com/122012870/235299940-bceea3db-a5d4-43a9-ae70-b81ee78aa8a9.png)
 
-- Jika Pelamar ingin melihat seluruh profil dirinya, Pelamar dapat memilih nomor menu 4. Pada pilihan menu ini Pelamar akan melihat biodata maupun CV dari si Pelamar tersebut, informasi itu antara lain adalah nama, tanggal lahir, email, pendidikan, jurusan dari si Pelamar, serta tahun bergabung Pelamar kedalam aplikasi LOKER
+- Jika Pelamar ingin melihat seluruh profil dirinya, Pelamar dapat memilih nomor menu 4. Pada pilihan menu ini Pelamar akan melihat biodata maupun CV dari si Pelamar tersebut. Informasi itu antara lain adalah nama, tanggal lahir, email, pendidikan, jurusan dari si Pelamar, serta tahun bergabung Pelamar kedalam aplikasi LOKER
 
 ![Cuplikan layar 2023-04-29 174532](https://user-images.githubusercontent.com/122012870/235300091-fe0add75-7c50-4ad0-b9e3-d6dd27362464.png)
 
@@ -805,7 +805,7 @@ if __name__ == "__main__":
 
 ![Cuplikan layar 2023-04-29 180217](https://user-images.githubusercontent.com/122012870/235300223-e1471c3d-f900-4fb4-93cb-f317e8e7f0c5.png)
 
-### LOGIN GAGAL 
+### 🔹LOGIN GAGAL 
 
 - Ketika User salah menginputkan username maupun password, maka login akan ditolak dan program tidak akan beralih ke halaman menu aplikasi selanjutnya
 
