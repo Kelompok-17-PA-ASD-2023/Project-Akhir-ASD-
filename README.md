@@ -1,8 +1,8 @@
 # Project Akhir ASD Kelompok 17
 Anggota kelompok : 
 - Vera Santi Wijaya 
+- Juventia Adelia Putri
 - Lidia Aprilia Putri 
-- Juventia Adelia Putri 
 
 ## 📌Deskripsi Program
 - Berikut adalah program project kelompok kami dengan tema lowongan pekerjaan. Tujuan dibuatnya program ini untuk mengelola informasi mengenai lowongan pekerjaan di suatu perusahaan yang meliputi posisi kerja, nama perusahaan, nominal gaji, domisili perusahaan, dan maksimal umur pelamar kerja. Program kami menggunakan database Mongodb untuk menyimpan data-data lowongan pekerjaan diatas. 
